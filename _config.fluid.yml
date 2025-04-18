@@ -163,6 +163,7 @@ archive:
   banner_img: https://s21.ax1x.com/2025/04/03/pE6iX6O.jpg
   banner_img_height: 100%
   banner_mask_alpha: 0.05
+
 # 分类页
 category:
   # 页面顶部大图
@@ -182,6 +183,7 @@ tag:
     unit: px  # 字号单位
     start_color: "#BBBBEE"
     end_color: "#337ab7"
+
 # 关于页
 about:
   # 页面顶部大图
@@ -196,6 +198,11 @@ about:
   icons:
     - { class: 'iconfont icon-github-fill', link: 'https://github.com/Unrealfeathers', tip: 'GitHub' }
 
+# 404页
+page404:
+  banner_img: https://s21.ax1x.com/2025/04/03/pE6iX6O.jpg
+  banner_img_height: 100%
+  banner_mask_alpha: 0.05
 
 
 # Hexo Configuration
@@ -217,7 +224,7 @@ timezone: 'Asia/Shanghai'
 # URL
 url: https://flowerdown.org
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :permalink
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -231,7 +238,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: [js/pdfjs/**]
 
 # Writing
 new_post_name: :title.md # File name of new posts
